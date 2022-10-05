@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TODO">
+  <meta name="author" content="Christian Diederich">
+  <meta name="copyright" content="Christian Diederich">
+  <meta name="date" content="2022-10-01">
+  <meta name="image" property="og:image" content="/assets/og-default-image.png">
+  <meta name="title" property="og:title" content="RESTful Services - Custom REST API and data storage">
+  <title>RESTful Services - Custom REST API and data storage</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="alternate" hreflang="en" href="https://restful.services/en">
+  <link rel="alternate" hreflang="de" href="https://restful.services/de">
+  <link rel="alternate" hreflang="x-default" href="https://restful.services/en">
+  <link rel="stylesheet" type="text/css" href="/assets/style.css">
+  <link rel="stylesheet" type="text/css" href="/assets/http-parser.css">
+  <script src="/assets/http-parser.js" defer></script>
+  <style>.cta{display:flex;flex-direction:column;align-items:center;gap:1em;padding:1em 1em 2em 1em;background:linear-gradient(32deg,#ceedff 0%,#fffacd 100%);border-radius:.4rem;margin-bottom:2em}.cta h2{font-size:1.8rem;text-align:center}@media screen and (max-width:45em){.cta{padding:1em .5em 2em .5em}.cta h2{font-size:1.6rem}}</style>
+</head>
+
+<body>
+  <header>
+    <nav class="content-wrapper">
+      <ul>
+        <li><a href="/en" id="logo" class="button button-gray"><svg height="20" width="20" version="1.1"
+              viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+              <g fill="#1a9fee">
+                <path d="m89.586 0v18.906l52.674-6.875 9.709 74.383h8.0312v-86.414h-70.414z" />
+                <path d="m132.75 24.286-97.586 12.738 3.2109 24.602 74.979-20.09 21.885 81.676 10.248-1.3379z" />
+                <path d="M 105.62,54.931 0,83.232 20.57,160 h 113.21 z" />
+              </g>
+            </svg>Getting Started</a></li>
+        <li><a href="/en/features.html" class="button button-gray">Features</a></li>
+        <li><a href="/en/plans.html" class="button button-gray">Plans</a></li>
+        <li class="last-nav-item-left"><a href="/en/docs.html" class="button button-gray">Docs</a></li>
+        <li><a href="/de" class="button button-gray button-icon"><svg xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <circle cx="12" cy="12" r="9"></circle>
+              <line x1="3.6" y1="9" x2="20.4" y2="9"></line>
+              <line x1="3.6" y1="15" x2="20.4" y2="15"></line>
+              <path d="M11.5 3a17 17 0 0 0 0 18"></path>
+              <path d="M12.5 3a17 17 0 0 1 0 18"></path>
+            </svg>DE</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1 class="hidden">Getting Started</h1>
+    <section class="text-wrapper">
+      <div class="cta">
+        <h2>Build Your Own Data-Driven REST API in No Time</h2>
+        <ul class="no-list-style">
+          <li class="icon ok">Highly adaptable REST API</li>
+          <li class="icon ok">Super fast in-memory database</li>
+          <li class="icon ok">Ready-to-use without any setup</li>
+          <li class="icon ok">High data security and data protection</li>
+          <li class="icon ok">Perfect for quick prototyping and smaller projects</li>
+        </ul>
+        <button class="button-blue">Create database</button>
+      </div>
+    </section>
+    <section class="text-wrapper">
+      <h2>Getting Started with the Public Server</h2>
+      <p>Our REST APIs adapt to your data, so <strong>you don't need to configure anything</strong>. You just use it.
+      </p>
+      <p>First, let's create a simple resource using <code>HTTP PUT</code>. Hit the "Run" button and see what
+        happens.</p>
+      <div data-http-parser>
+        <div class="http-parser-editor-wrapper">
+          <div>
+            <pre><span class="http-method">PUT</span> <span class="http-path">/test123456/users/nikolai</span> <span class="http-version-prefix">HTTP</span><span class="http-version-slash">/</span><span class="http-version-number">1.1</span> 
+<span class="http-header-key">Host</span>:<span class="http-header-value"> public.demo.restful.services:443</span>
+<span class="http-header-key">Content-Type</span>:<span class="http-header-value"> application/json</span>
+
+<span class="http-body">{
+  "name": "Nikolai",
+  "age": 3
+}</span>
+</pre>
+            <textarea spellcheck="false">PUT /test123456/users/nikolai HTTP/1.1
+Host: public.demo.restful.services:443
+Content-Type: application/json
+
+{
+  "name": "Nikolai",
+  "age": 3
+}</textarea>
+          </div>
+        </div>
+        <div class="http-parser-action-bar"><button class="button button-transparent-dark button-icon"
+            data-http-parser-run><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5"
+              fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3" />
+              <path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3" />
+              <circle cx="15" cy="9" r="1" />
+            </svg>Run</button><button class="button button-transparent-dark button-icon"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M9 13l-4 -4l4 -4m-4 4h11a4 4 0 0 1 0 8h-1" />
+            </svg>Reset</button></div>
+        <div class="http-parser-response-wrapper">
+          <pre></pre>
+        </div>
+      </div>
+      <p>The server response should inform you about successfully adding a resource. You just saved a JSON object
+        to a <strong>freely definable</strong> path!</p>
+      <div class="highlight-box">
+        <p>The editors on this website use <a href="https://httpwg.org/specs/rfc7230.html" target="_blank"
+            rel="noopener noreferrer">HTTP syntax</a>. The code is parsed in your browser and sent
+          directly via your browser's Fetch API. TODO: not fully iplemented</p>
+        <p>So you can change the examples as you like. However, in order to be able to follow the instructions here
+          well, you should not change them too much for the beginning.</p>
+      </div>
+      <p>You can get the resource you just created with <code>HTTP GET</code>:</p>
+      <div data-http-parser>
+        <div class="http-parser-editor-wrapper">
+          <div>
+            <pre><span class="http-method">PUT</span></pre>
+            <textarea spellcheck="false">PUT</textarea>
+          </div>
+        </div>
+        <div class="http-parser-action-bar"><button class="button button-transparent-dark button-icon"
+            data-http-parser-run><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5"
+              fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3" />
+              <path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3" />
+              <circle cx="15" cy="9" r="1" />
+            </svg>Run</button><button class="button button-transparent-dark button-icon"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M9 13l-4 -4l4 -4m-4 4h11a4 4 0 0 1 0 8h-1" />
+            </svg>Reset</button></div>
+        <div class="http-parser-response-wrapper">
+          <pre></pre>
+        </div>
+      </div>
+      <p>Another way to add a resouce is <code>HTTP POST</code>. In contrast to <code>HTTP PUT</code>, a new, unique
+        resource ID is automatically created:</p>
+      <div data-http-parser>
+        <div class="http-parser-editor-wrapper">
+          <div>
+            <pre><span class="http-method">PUT</span></pre>
+            <textarea spellcheck="false">PUT</textarea>
+          </div>
+        </div>
+        <div class="http-parser-action-bar"><button class="button button-transparent-dark button-icon"
+            data-http-parser-run><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5"
+              fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3" />
+              <path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3" />
+              <circle cx="15" cy="9" r="1" />
+            </svg>Run</button><button class="button button-transparent-dark button-icon"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M9 13l-4 -4l4 -4m-4 4h11a4 4 0 0 1 0 8h-1" />
+            </svg>Reset</button></div>
+        <div class="http-parser-response-wrapper">
+          <pre></pre>
+        </div>
+      </div>
+      <div class="highlight-box">
+        <p>You can add <strong>any type</strong> of resource. Even binary resources such as images or proprietary
+          formats / mine types
+          are supported.</p>
+      </div>
+      <p>With <code>HTTP GET</code>, not only single resources can be requested, but also so-called collections.
+        Collections give you an overview of all direct child resources:</p>
+      <div data-http-parser>
+        <div class="http-parser-editor-wrapper">
+          <div>
+            <pre><span class="http-method">PUT</span></pre>
+            <textarea spellcheck="false">PUT</textarea>
+          </div>
+        </div>
+        <div class="http-parser-action-bar"><button class="button button-transparent-dark button-icon"
+            data-http-parser-run><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5"
+              fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3" />
+              <path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3" />
+              <circle cx="15" cy="9" r="1" />
+            </svg>Run</button><button class="button button-transparent-dark button-icon"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M9 13l-4 -4l4 -4m-4 4h11a4 4 0 0 1 0 8h-1" />
+            </svg>Reset</button></div>
+        <div class="http-parser-response-wrapper">
+          <pre></pre>
+        </div>
+      </div>
+      <p>You can use various <a href="/en/docs.html#queries">URL queries</a> to get different responses and, for
+        example, include the actual
+        data or do
+        some sorting or filtering. And all without having to configure the REST API beforehand. Pretty cool right?</p>
+      <p>RESTful Services also provides additional features like SSE (server-sent events) or webhooks to react
+        immediately on a change in your database.</p>
+      <p>Check out the <a href="/en/features.html">features</a> and <a href="/en/docs.html">documentation</a> to learn
+        more. Take the next steps and
+        create your own free database in just a minute:</p>
+      <div class="center"><button class="button-blue">Start your journey now</button></div>
+      <div class="highlight-box">
+        <p>Did I already mention that we attach great importance to the protection of your
+          data? Our service is <strong>GDPR compliant</strong> not only because we are required to be by EU law, but
+          also because we
+          believe your data belongs to
+          you. Only to you. See also our <a href="/en/privacy-policy.html">privacy policy in plain english</a>.</p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="content-wrapper">
+      <div class="desc"><svg version="1.1" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+          <g fill="#1a9fee">
+            <path d="m89.586 0v18.906l52.674-6.875 9.709 74.383h8.0312v-86.414h-70.414z" />
+            <path d="m132.75 24.286-97.586 12.738 3.2109 24.602 74.979-20.09 21.885 81.676 10.248-1.3379z" />
+            <path d="M 105.62,54.931 0,83.232 20.57,160 h 113.21 z" />
+          </g>
+        </svg>
+        <p>RESTful Services is the easiest way to build your own data-driven REST API.</p>
+        <p class="no-margin">&copy; 2022 SubLine&nbsp;Solutions</p>
+      </div>
+      <div>
+        <div>Discover</div>
+        <nav>
+          <ul class="no-list-style">
+            <li><a href="/en">Getting Started</a></li>
+            <li><a href="/en/features.html">Features</a></li>
+            <li><a href="/en/plans.html">Plans</a></li>
+            <li><a href="/en/docs.html">Documentation</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div>
+        <div>Comparisons</div>
+        <nav>
+          <ul class="no-list-style">
+            <li><a href="/en/comparisons/mockapi.html">mockAPI</a></li>
+            <li><a href="/en/comparisons/jsonplaceholder.html">JSONPlaceholder</a></li>
+            <li><a href="/en/comparisons/restdb.io.html">restdb.io</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div>
+        <div>About</div>
+        <nav>
+          <ul class="no-list-style">
+            <li><a href="/en/about.html">Hi, I'm Christian</a></li>
+            <li><a href="/en/terms-and-conditions.html">Terms and Conditions</a></li>
+            <li><a href="/en/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/en/imprint.html">Imprint</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

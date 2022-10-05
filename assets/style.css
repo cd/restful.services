@@ -1,0 +1,266 @@
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../assets/rubik-v14-latin-regular.woff2") format("woff2"),
+    url("../assets/rubik-v14-latin-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../assets/inconsolata-v31-latin-regular.woff2") format("woff2"),
+    url("../assets/inconsolata-v31-latin-regular.woff") format("woff");
+}
+
+body {
+  margin: 0;
+  font-family: "Rubik";
+  border-top: 0.3rem solid #1a9fee;
+}
+
+header nav ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin: 0 auto;
+  padding: 1em 0;
+  list-style-type: none;
+}
+
+#logo {
+  display: inline-flex;
+  align-items: center;
+}
+
+#logo svg {
+  height: 1em;
+  transform: scale(1.6);
+  width: auto;
+  margin-right: 2em;
+}
+
+a {
+  color: #008bdb;
+  stroke: #008bdb;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+code {
+  font-family: "Inconsolata";
+  background-color: #ecf8ff;
+  padding: 0 0.1em;
+}
+
+.highlight-box {
+  border-left: 5px solid #1a9fee;
+  background-color: #ecf8ff;
+  padding: 0.2rem 1rem;
+  margin: 1rem 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.content-wrapper,
+.text-wrapper {
+  margin: 0 auto;
+  padding: 0 0.5em;
+}
+
+.content-wrapper {
+  max-width: 70em;
+}
+
+.text-wrapper {
+  max-width: 50em;
+}
+
+.button,
+button {
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 2em;
+  padding: 0.8em 1em;
+  transition: background-color 0.1s;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1em;
+}
+
+.button-gray {
+  background-color: white;
+  color: #5c5c5c;
+  stroke: #5c5c5c;
+}
+
+#logo.button-gray {
+  stroke: none;
+}
+
+.button-gray:hover {
+  background-color: #f3f3f3;
+}
+
+.button-blue {
+  background-color: #1a9fee;
+  color: white;
+  stroke: white;
+}
+
+.button-blue:hover {
+  background-color: #40b9ff;
+}
+
+.button-transparent-dark {
+  background-color: transparent;
+  color: white;
+  stroke: white;
+}
+
+.button-transparent-dark:disabled {
+  opacity: 0.5;
+}
+
+.button-transparent-dark:not(:disabled):hover {
+  color: #40b9ff;
+  stroke: #40b9ff;
+}
+
+.button-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.button-icon > svg {
+  height: 1em;
+  transform: scale(1.4);
+}
+
+.last-nav-item-left {
+  flex-grow: 1;
+}
+
+.no-list-style {
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+}
+
+ul li {
+  margin: 0.2em 0;
+}
+
+ul li.icon {
+  display: flex;
+  gap: 0.3em;
+}
+
+ul li.icon::before {
+  width: 1.2em;
+  height: 1.2em;
+}
+
+ul .nok {
+  color: gray;
+}
+
+ul .nok::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' stroke-width='3' fill='none' stroke-linecap='round' stroke='%23c0c0c0' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none' /%3E%3Cline x1='18' y1='6' x2='6' y2='18' /%3E%3Cline x1='6' y1='6' x2='18' y2='18' /%3E%3C/svg%3E");
+}
+
+ul .ok::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' stroke-width='3' stroke='%2322aa28' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M5 12l5 5l10 -10' /%3E%3C/svg%3E");
+}
+
+footer {
+  background-color: #f3f3f3;
+  padding: 2em 1em;
+}
+
+footer .content-wrapper {
+  display: flex;
+  gap: 3em;
+  justify-content: space-between;
+}
+
+footer .content-wrapper > * {
+  flex-basis: 25%;
+}
+
+footer .desc svg {
+  height: 2em;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin: 1em 0 0.5em 0;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 1em 0 0.5em 0;
+}
+
+h2,
+h3 {
+  line-height: 1.3em;
+}
+
+.center {
+  text-align: center;
+}
+
+@media screen and (max-width: 45em) {
+  header {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  header .button {
+    padding: 0.5em;
+  }
+
+  #logo svg {
+    margin-right: 1.5em;
+  }
+
+  header nav .last-nav-item-left {
+    flex-grow: 0;
+  }
+
+  header nav ul {
+    justify-content: space-evenly;
+    gap: 0;
+  }
+
+  footer .content-wrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 1em;
+  }
+
+  footer .content-wrapper > * {
+    width: 100%;
+  }
+
+  footer .desc {
+    order: 1;
+    margin-top: 1rem;
+  }
+}
