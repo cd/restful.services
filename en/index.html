@@ -75,39 +75,42 @@
       <div data-http-parser>
         <div class="http-parser-editor-wrapper">
           <div>
-            <pre><span class="http-method">PUT</span> <span class="http-path">/test123456/users/nikolai</span> <span class="http-version-prefix">HTTP</span><span class="http-version-slash">/</span><span class="http-version-number">1.1</span> 
-<span class="http-header-key">Host</span>:<span class="http-header-value"> public.demo.restful.services:443</span>
+            <pre data-http-parser-rendered><span class="http-method">PUT</span> <span class="http-path">/review123456/beers/pale-ale</span> <span class="http-version-prefix">HTTP</span><span class="http-version-slash">/</span><span class="http-version-number">1.1</span> 
+<span class="http-header-key">Host</span>:<span class="http-header-value"> public.demo.restful.services</span>
 <span class="http-header-key">Content-Type</span>:<span class="http-header-value"> application/json</span>
 
 <span class="http-body">{
-  "name": "Nikolai",
-  "age": 3
+  "type": "Pale Ale",
+  "flavor": 9
 }</span>
 </pre>
-            <textarea spellcheck="false">PUT /test123456/users/nikolai HTTP/1.1
-Host: public.demo.restful.services:443
+            <textarea spellcheck="false" data-http-parser-textarea>PUT /review123456/beers/pale-ale HTTP/1.1
+Host: public.demo.restful.services
 Content-Type: application/json
 
 {
-  "name": "Nikolai",
-  "age": 3
+  "type": "Pale Ale",
+  "flavor": 9
 }</textarea>
           </div>
         </div>
-        <div class="http-parser-action-bar"><button class="button button-transparent-dark button-icon"
-            data-http-parser-run><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5"
-              fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <div class="http-parser-action-bar">
+          <button class="button button-transparent-dark button-icon" data-http-parser-run><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path
                 d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3" />
               <path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3" />
               <circle cx="15" cy="9" r="1" />
-            </svg>Run</button><button class="button button-transparent-dark button-icon"><svg
+            </svg>Run</button>
+          <button class="button button-transparent-dark button-icon" data-http-parser-reset><svg
               xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" fill="none"
               stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path d="M9 13l-4 -4l4 -4m-4 4h11a4 4 0 0 1 0 8h-1" />
-            </svg>Reset</button></div>
+            </svg>Reset</button>
+        </div>
         <div class="http-parser-response-wrapper">
           <pre></pre>
         </div>
@@ -125,24 +128,30 @@ Content-Type: application/json
       <div data-http-parser>
         <div class="http-parser-editor-wrapper">
           <div>
-            <pre><span class="http-method">PUT</span></pre>
-            <textarea spellcheck="false">PUT</textarea>
+            <pre data-http-parser-rendered><span class="http-method">GET</span> <span class="http-path">/review123456/beers/pale-ale</span> <span class="http-version-prefix">HTTP</span><span class="http-version-slash">/</span><span class="http-version-number">1.1</span> 
+<span class="http-header-key">Host</span>:<span class="http-header-value"> public.demo.restful.services</span>
+</pre>
+            <textarea spellcheck="false" data-http-parser-textarea>GET /review123456/beers/pale-ale HTTP/1.1
+Host: public.demo.restful.services</textarea>
           </div>
         </div>
-        <div class="http-parser-action-bar"><button class="button button-transparent-dark button-icon"
-            data-http-parser-run><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5"
-              fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <div class="http-parser-action-bar">
+          <button class="button button-transparent-dark button-icon" data-http-parser-run><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path
                 d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3" />
               <path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3" />
               <circle cx="15" cy="9" r="1" />
-            </svg>Run</button><button class="button button-transparent-dark button-icon"><svg
+            </svg>Run</button>
+          <button class="button button-transparent-dark button-icon" data-http-parser-reset><svg
               xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" fill="none"
               stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path d="M9 13l-4 -4l4 -4m-4 4h11a4 4 0 0 1 0 8h-1" />
-            </svg>Reset</button></div>
+            </svg>Reset</button>
+        </div>
         <div class="http-parser-response-wrapper">
           <pre></pre>
         </div>
@@ -152,24 +161,42 @@ Content-Type: application/json
       <div data-http-parser>
         <div class="http-parser-editor-wrapper">
           <div>
-            <pre><span class="http-method">PUT</span></pre>
-            <textarea spellcheck="false">PUT</textarea>
+            <pre data-http-parser-rendered><span class="http-method">POST</span> <span class="http-path">/review123456/beers</span> <span class="http-version-prefix">HTTP</span><span class="http-version-slash">/</span><span class="http-version-number">1.1</span> 
+<span class="http-header-key">Host</span>:<span class="http-header-value"> public.demo.restful.services</span>
+<span class="http-header-key">Content-Type</span>:<span class="http-header-value"> application/json</span>
+
+<span class="http-body">{
+  "type": "Imperial Stout",
+  "flavor": 6
+}</span>
+</pre>
+            <textarea spellcheck="false" data-http-parser-textarea>POST /review123456/beers HTTP/1.1
+Host: public.demo.restful.services
+Content-Type: application/json
+
+{
+  "type": "Imperial Stout",
+  "flavor": 6
+}</textarea>
           </div>
         </div>
-        <div class="http-parser-action-bar"><button class="button button-transparent-dark button-icon"
-            data-http-parser-run><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5"
-              fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <div class="http-parser-action-bar">
+          <button class="button button-transparent-dark button-icon" data-http-parser-run><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path
                 d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3" />
               <path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3" />
               <circle cx="15" cy="9" r="1" />
-            </svg>Run</button><button class="button button-transparent-dark button-icon"><svg
+            </svg>Run</button>
+          <button class="button button-transparent-dark button-icon" data-http-parser-reset><svg
               xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" fill="none"
               stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path d="M9 13l-4 -4l4 -4m-4 4h11a4 4 0 0 1 0 8h-1" />
-            </svg>Reset</button></div>
+            </svg>Reset</button>
+        </div>
         <div class="http-parser-response-wrapper">
           <pre></pre>
         </div>
@@ -184,24 +211,30 @@ Content-Type: application/json
       <div data-http-parser>
         <div class="http-parser-editor-wrapper">
           <div>
-            <pre><span class="http-method">PUT</span></pre>
-            <textarea spellcheck="false">PUT</textarea>
+            <pre data-http-parser-rendered><span class="http-method">GET</span> <span class="http-path">/review123456/beers</span> <span class="http-version-prefix">HTTP</span><span class="http-version-slash">/</span><span class="http-version-number">1.1</span> 
+<span class="http-header-key">Host</span>:<span class="http-header-value"> public.demo.restful.services</span>
+</pre>
+            <textarea spellcheck="false" data-http-parser-textarea>GET /review123456/beers HTTP/1.1
+Host: public.demo.restful.services</textarea>
           </div>
         </div>
-        <div class="http-parser-action-bar"><button class="button button-transparent-dark button-icon"
-            data-http-parser-run><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5"
-              fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <div class="http-parser-action-bar">
+          <button class="button button-transparent-dark button-icon" data-http-parser-run><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path
                 d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3" />
               <path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3" />
               <circle cx="15" cy="9" r="1" />
-            </svg>Run</button><button class="button button-transparent-dark button-icon"><svg
+            </svg>Run</button>
+          <button class="button button-transparent-dark button-icon" data-http-parser-reset><svg
               xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" fill="none"
               stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path d="M9 13l-4 -4l4 -4m-4 4h11a4 4 0 0 1 0 8h-1" />
-            </svg>Reset</button></div>
+            </svg>Reset</button>
+        </div>
         <div class="http-parser-response-wrapper">
           <pre></pre>
         </div>
