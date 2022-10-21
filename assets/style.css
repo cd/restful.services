@@ -53,6 +53,14 @@ a:hover {
   text-decoration: none;
 }
 
+.light {
+  color: gray;
+}
+
+.small {
+  font-size: 0.8em;
+}
+
 code {
   font-family: "Inconsolata";
   background-color: #ecf8ff;
@@ -87,6 +95,7 @@ code {
 
 .button,
 button {
+  display: inline-block;
   border: none;
   cursor: pointer;
   text-decoration: none;
@@ -187,6 +196,7 @@ ul .ok::before {
 footer {
   background-color: #f3f3f3;
   padding: 2em 1em;
+  margin-top: 3rem;
 }
 
 footer .content-wrapper {
@@ -207,16 +217,22 @@ footer .desc svg {
   margin: 0;
 }
 
+h1 {
+  font-size: 2.5rem;
+  font-weight: normal;
+  text-align: center;
+}
+
 h2 {
   font-size: 1.5rem;
   font-weight: normal;
-  margin: 1em 0 0.5em 0;
+  margin: 1.5em 0 1em 0;
 }
 
 h3 {
   font-size: 1rem;
   font-weight: bold;
-  margin: 1em 0 0.5em 0;
+  margin: 1.5em 0 1em 0;
 }
 
 h2,
@@ -228,7 +244,29 @@ h3 {
   text-align: center;
 }
 
-@media screen and (max-width: 45em) {
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.row > * {
+  flex: 1;
+}
+
+@media screen and (max-width: 55rem) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .row > * {
+    width: initial;
+  }
+}
+
+@media screen and (max-width: 45rem) {
   header {
     font-size: 0.8rem;
     text-align: center;
